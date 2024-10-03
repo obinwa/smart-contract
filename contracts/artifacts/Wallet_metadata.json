@@ -6,17 +6,33 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "accountPassphrase",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "guardian1",
+						"type": "address"
+					},
+					{
+						"internalType": "address payable",
+						"name": "guardian2",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "fallback"
 			},
 			{
 				"inputs": [],
-				"name": "balance",
+				"name": "checkBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -37,24 +53,56 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "accountPassphrase",
+						"type": "string"
+					}
+				],
+				"name": "login",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
 					},
 					{
-						"internalType": "address",
+						"internalType": "address payable",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "updateAllowance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAllFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
 						"name": "toAccount",
 						"type": "address"
 					}
 				],
 				"name": "withdrawToAccount",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -67,13 +115,7 @@
 					}
 				],
 				"name": "withdrawToCaller",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -110,11 +152,11 @@
 	},
 	"sources": {
 		"contracts/Wallet.sol": {
-			"keccak256": "0x0f56005e1aa77db04e8af81ec9405c6d4d59e12f955db9c9384fbb879eb6f09c",
+			"keccak256": "0x92c26435a5e17161f90d7eb34f957fd8fea7154e00a4ca5f6b0ecdc3f56eecec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ebd9d2801cc8ac9bed14c136a01197587034bc8356e609902cd49d21f5d88cdd",
-				"dweb:/ipfs/Qmbsre3KtsoFZZJGRTXxio4RoHjhXuv5qDLwDAMowaVSPK"
+				"bzz-raw://e30aba3fada87379577c6044a3c037a50a268cbb98fb094e6f1732a2a5f72db6",
+				"dweb:/ipfs/QmZ1iSQz1Co19xrCy4N9P7BgR81fHeBR7k8iMrtTGxdnFy"
 			]
 		}
 	},
